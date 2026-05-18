@@ -185,7 +185,6 @@ def get_model_answers_wedlm(
                         temperature=0.0,
                         max_tokens=max_new_token,
                         stop_token_ids=stop_token_ids,
-                        seed=i,
                         wedlm_entropy_threshold=wedlm_entropy_threshold,
                         wedlm_pos_penalty_factor=wedlm_pos_penalty_factor,
                     )
@@ -194,7 +193,6 @@ def get_model_answers_wedlm(
                         temperature=temperature,
                         max_tokens=max_new_token,
                         stop_token_ids=stop_token_ids,
-                        seed=i,
                         wedlm_entropy_threshold=wedlm_entropy_threshold,
                         wedlm_pos_penalty_factor=wedlm_pos_penalty_factor,
                     )
