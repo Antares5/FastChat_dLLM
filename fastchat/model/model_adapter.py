@@ -91,6 +91,7 @@ OPENAI_MODEL_LIST = (
     "chatgpt-4o-latest",
     "o1-preview",
     "o1-mini",
+    "deepseek-v4-pro"
 )
 
 
