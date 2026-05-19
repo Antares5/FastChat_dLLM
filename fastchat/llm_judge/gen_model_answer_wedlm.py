@@ -122,7 +122,7 @@ def get_model_answers(
         if question["category"] in temperature_config:
             temperature = temperature_config[question["category"]]
         else:
-            temperature = 0.7
+            temperature = 0.1
 
         choices = []
         for i in range(num_choices):
