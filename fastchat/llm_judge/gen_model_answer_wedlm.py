@@ -122,7 +122,7 @@ def get_model_answers(
         if question["category"] in temperature_config:
             temperature = temperature_config[question["category"]]
         else:
-            temperature = 0.1
+            temperature = 0.2
 
         choices = []
         for i in range(num_choices):
@@ -134,8 +134,8 @@ def get_model_answers(
                 conv.append_message(conv.roles[0], qs)
                 conv.append_message(conv.roles[1], None)
                 prompt = conv.get_prompt()
-                print("Prompt:", prompt)
-                input_ids = tokenizer([prompt]).input_ids
+                #print("Prompt:", prompt)
+                input_ids = tokenizer.apply_chat_template(prompt, tokenize=False, add_generation_prompt=True)
                 samplingParams = SamplingParams(
                     temperature=temperature,
                     max_tokens=max_new_token,
