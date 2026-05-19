@@ -196,7 +196,7 @@ def get_model_answers(
                     #     else:
                     #         output = output.replace(special_token, "")
 
-                    output_ids = model.generate([prompt], samplingParams)
+                    output_ids = model.generate([input_ids], samplingParams)
                     output = output_ids[0]["text"]
                     print("Raw output:", output)
 
