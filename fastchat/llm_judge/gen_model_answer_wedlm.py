@@ -136,7 +136,7 @@ def get_model_answers(
                 prompt = conv.get_prompt()
                 print("Prompt:", prompt)
                 input_ids = tokenizer([prompt]).input_ids
-                SamplingParams = SamplingParams(
+                samplingParams = SamplingParams(
                     temperature=temperature,
                     max_tokens=max_new_token,
                     stop_token_ids=stop_token_ids,
@@ -196,7 +196,7 @@ def get_model_answers(
                     #     else:
                     #         output = output.replace(special_token, "")
 
-                    output_ids = model.generate([prompt], SamplingParams)
+                    output_ids = model.generate([prompt], samplingParams)
                     output = output_ids[0]["text"]
                     print("Raw output:", output)
 
